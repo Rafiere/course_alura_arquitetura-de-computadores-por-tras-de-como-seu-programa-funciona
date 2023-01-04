@@ -81,6 +81,71 @@ Esse programa não correrá o risco de travar igual o primeiro programa, pois a 
 
 Durante muitos anos, apenas a velocidade do clock diferenciava a velocidade dos processadores, assim, quanto mais rápido o clock, mais rápido o processador seria.
 
+Nos processadores modernos, adicionamos mais núcleos aos processadores, assim, quanto mais núcleos, mais "braços" o processador vai ter, e ele vai ser capaz de executar uma maior quantidade de operações, como a busca, a decodificação e a execução ao mesmo tempo.
+
+Os dispositivos de entrada e de saída são utilizados para enviarmos inputs (entrada) e recebermos um output do coputador (saída).
+
+Os drivers são utilizados para abstrairmos várias particularidades dos dispositivos de entrada e saída, assim, não importa a implementação de um teclado, por exemplo, através do driver, que é uma camada de compatibilidade, o teclado conseguirá se comunicar com o computador.
+
+## Monitor:
+
+A imagem de um monitor é representada por pixels. Cada pixel pode ter três cores, que são o "vermelho", o "verde" e o "azul". Os pixels, normalmente, são atualizados da esquerda para a direita.
+
+A placa de vídeo possui o objetivo de atualizar rapidamente os pixels na tela, assim, elas são otimizadas para realizar esses cálculos de atualização de pixels com um maior desempenho.
+
+## Teclado:
+
+Quando apertamos uma tecla, emitimos um sinal para o computador que uma determinada tecla foi executada. Ele envia apenas a posição do caractere que foi executada.
+
+## Execução de Várias Tarefas ao Mesmo Tempo:
+
+O computador executa dezenas de programas ao mesmo tempo, assim, para o computador conseguir executar música e mexer o mouse simultaneamente, ele move um pouquinho o mouse e toca um pouco de música, e, como essas operações são executadas muito rapidamente, ele executa um pouquinho para cada programa.
+
+Cada programa deverá ser executado por um determinado tempo, assim, o SO cria uma fila, e, nessa fila, cada programa é executado durante o tempo que está definido na fila. A prioridade do mouse, por exemplo, é maior do que a de outros programas, por isso que ele precisa ser executado muito rapidamente.
+
 # Aula 04 - Como a memória funciona:
 
+## Cache:
+
+A memória DRAM é uma memória RAM mais barata, mas também mais lenta. A memória SRAM é muito mais rápida do que a DRAM, mas ela é mais cara.
+
+O processador possui uma memória SRAM, assim, ela armazena os dados que estão sendo mais utilizados no momento, assim, ao invés do processador buscar um dado na memória RAM, ele colocará esse dado que está sendo mais utilizado na memória cache.
+
+Existem vários níveis de cache.
+
+O cache L1 é muito colado na CPU, e o cache L2 é um pouco maior do que o L1, e ele está colado no L2. Cada core possui um cache L1 e L2. O cache L3 é um cache que é muito maior e um pouco mais lento, mas ele é compartilhado por todos os cores da CPU.
+
+## Hierarquia de Memória:
+
+Abaixo, temos o nome, a velocidade e a quantidade de armazenamento de cada memória.
+
+1. Registrador - 1 Ciclo de Clock ~ 500 Bytes
+2. Cache L1 - 700GB/s - 64 KB
+3. Cache L2 - 200GB/s - 500 KB
+4. Cache L3 - 150GB/s - 4 MB
+5. RAM - 10GB/s - 8 GB
+6. SSD - 2GB/s - 500GB
+7. HD - 200MB/s - 4 TB
+8. Cloud - 2MB/s - PB ou EB
+
+## Princípio da Localidade:
+
+A localidade temporal consiste em sempre utilizarmos a mesma porção da memória.
+
+A localidade espacial significa que, se estamos acessando um dado em um local, provavelmente acessaremos o vizinho dessa instrução de forma posterior.
+
+Isso ocorre pois os programas, na maioria das vezes, são escritos de forma sequencial.
+
+## Processador 32 ou 64 bits:
+
+É o tamanho de informação que pode ser processada pela CPU em um ciclo de clock. Um processador de 64 bits possui mais performance, pois ele processa muitos dados de uma vez. Um processador de 64 bits também possui uma maior quantidade de memória. Um processador de 32 bits consegue representar apenas valores de 2^32, ou seja, não conseguimos representar mais do que 4GB de memória RAM. Um processador de 64 bits, pelo contrário, consegue suportar mais ou menos 16 bilhões de GB de RAM.
+
+Um Windows de 32 bits deverá enviar instruções de 32 bits. Um processador de 64 bits consegue suportar instruções de 32 bits, mas ele funcionará de forma mais otimizada com um computador de 64 bits.
+
 # Aula 05 - Como os dados são armazenados:
+
+Quando executamos um código, os valores são armazenados na memória.
+
+Os caracteres são armazenados de acordo com valores, e esses valores são armazenados na memória.
+
+O ASCII é um padrão que codifica os caracteres utilizando 7 bits.
