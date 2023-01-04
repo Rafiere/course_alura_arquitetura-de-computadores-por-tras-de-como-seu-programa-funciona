@@ -149,3 +149,13 @@ Quando executamos um código, os valores são armazenados na memória.
 Os caracteres são armazenados de acordo com valores, e esses valores são armazenados na memória.
 
 O ASCII é um padrão que codifica os caracteres utilizando 7 bits.
+
+O Unicode trata de letras, caracteres, e os símbolos respectivos dele. Ele é uma evolução do ASCII, com suporte a um maior número de caracteres.
+
+O UTF-8 não possui um número fixo de bytes para cada caractere, assim, cada caractere tem um determinado tamanho. Cerca de 95% da web utiliza o UTF-8.
+
+Um ponteiro é um valor que aponta para outro valor na memória.
+
+A passagem por referência consiste em copiarmos o endereço de memória de uma lista, assim, duas variáveis poderão apontar pro mesmo endereço da memória.
+
+A passagem por valor consiste em copiarmos o valor de uma lista e atribuirmos para outra lista, sendo que essa outra lista estará em outro endereço de memória.
